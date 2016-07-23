@@ -22,3 +22,8 @@ pwrcons$Timestamp <-paste(pwrcons$Date, pwrcons$Time)
 
 # Creates graph of date/time vs global active power data
 plot(strptime(pwrcons$Timestamp, "%d/%m/%Y %H:%M:%S"), pwrcons$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power(kilowatts)")
+
+
+
+dev.copy(png, file="plot2.png", width=500, height=480)
+dev.off()
