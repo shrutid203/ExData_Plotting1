@@ -23,3 +23,7 @@ pwrcons$Timestamp <-paste(pwrcons$Date, pwrcons$Time)
 #Create histogram for Global Active Power
 hist(pwrcons$Global_active_power, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
+
+#Save it as png
+dev.copy(png, file="plot1.png", width=480, height=480)
+dev.off()
